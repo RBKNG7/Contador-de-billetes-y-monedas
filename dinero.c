@@ -24,10 +24,11 @@ int total_euros(int billetes[],int valor[])
     return total;
 }
 
-int monedas()
+float monedas()
 {
-    int monedas[M], total;
+    int monedas[M];
     int valor[M] = {1, 2, 5, 10, 20, 50, 100, 200}; 
+    float total;
     char *names[M] = {"1cent", "2cent", "5cent", "10cent", "20cent", "50cent", "1 euro", "2 euros"};
 
     for (int i = 0; i < M; i++) {
@@ -58,7 +59,7 @@ int billetes()
 
 void billetes_y_monedas()
 {
-    printf("Hay un total de \033[32m%d€\033[0m\n", billetes() + monedas());
+    printf("Hay un total de \033[32m%.2f€\033[0m\n", billetes() + monedas());
 }
 
 int main()
